@@ -1,22 +1,25 @@
+
+
+
+package SoftDev;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SoftDev;
-
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author b_kotsana
  */
-public class Etransport extends javax.swing.JFrame {
+public class ShareRide extends javax.swing.JFrame {
 
     /**
-     * Creates new form Etransport
+     * Creates new form ShareRide
      */
-    public Etransport() {
+    public ShareRide() {
         initComponents();
     }
 
@@ -37,38 +40,38 @@ public class Etransport extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Welcome To E-Transport");
+        jLabel2.setText("Welcome To Share-Ride");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(190, 30, 460, 60);
 
-        jButton5.setText("Share my Ride");
+        jButton5.setText("Προσφέρω  διαδρομή");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(520, 170, 130, 40);
+        jButton5.setBounds(480, 170, 200, 40);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smart.png"))); // NOI18N
         jLabel4.setText("jLabel1");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(310, 220, 190, 170);
 
-        jButton6.setText("GPS Bus");
+        jButton6.setText("Ενδιαφέρομαι για Διαδρομή ");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(150, 170, 130, 40);
+        jButton6.setBounds(130, 170, 190, 40);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton4.setText("BACK");
@@ -104,33 +107,30 @@ public class Etransport extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        SmartCity a= new SmartCity();
-        a.pack();
-        a.setLocationRelativeTo(null);
-        a.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-         String number = JOptionPane.showInputDialog("ENTER numver of  bus you want to take  ");
-        
         
 
-        
         dispose();
-        BusPos c= new BusPos();
+        ShareRideTake c= new ShareRideTake();
         c.pack();
         c.setLocationRelativeTo(null);
         c.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        Etransport a= new Etransport();
+        a.pack();
+        a.setLocationRelativeTo(null);
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
           dispose();
-        ShareRide c= new ShareRide();
+        ShareRideGive c= new ShareRideGive();
         c.pack();
         c.setLocationRelativeTo(null);
         c.setVisible(true);
@@ -153,20 +153,20 @@ public class Etransport extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Etransport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ShareRide.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Etransport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ShareRide.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Etransport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ShareRide.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Etransport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ShareRide.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Etransport().setVisible(true);
+                new ShareRide().setVisible(true);
             }
         });
     }

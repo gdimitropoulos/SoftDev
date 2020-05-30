@@ -5,6 +5,8 @@
  */
 package SoftDev;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author b_kotsana
@@ -29,8 +31,12 @@ public class Etraffic extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -43,10 +49,37 @@ public class Etraffic extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(210, 30, 420, 60);
 
+        jButton1.setText("LIVE CAMERAS");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(120, 180, 130, 50);
+
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smart.png"))); // NOI18N
         jLabel4.setText("jLabel1");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(310, 220, 190, 170);
+
+        jButton2.setText("METAKINHΣΕΙΣ");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(120, 290, 130, 50);
+
+        jButton3.setText("PARKING");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(560, 180, 140, 50);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton4.setText("BACK");
@@ -57,6 +90,15 @@ public class Etraffic extends javax.swing.JFrame {
         });
         jPanel1.add(jButton4);
         jButton4.setBounds(280, 460, 220, 40);
+
+        jButton5.setText("FIND ROUTE");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5);
+        jButton5.setBounds(570, 280, 130, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -91,6 +133,46 @@ public class Etraffic extends javax.swing.JFrame {
         a.setVisible(true);
 
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        String password= JOptionPane.showInputDialog(" Enter address :");
+        dispose();
+        Camera a= new Camera();
+        a.pack();
+        a.setLocationRelativeTo(null);
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+         dispose();
+        Heatmap a= new Heatmap();
+        a.pack();
+        a.setLocationRelativeTo(null);
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        FindRoute a = new FindRoute();
+        a.pack();
+        a.setLocationRelativeTo(null);
+        a.setVisible(true);
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+         dispose();
+        Parking a = new Parking();
+        a.pack();
+        a.setLocationRelativeTo(null);
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,7 +210,11 @@ public class Etraffic extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

@@ -5,18 +5,16 @@
  */
 package SoftDev;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author b_kotsana
  */
-public class Etransport extends javax.swing.JFrame {
+public class Camera extends javax.swing.JFrame {
 
     /**
-     * Creates new form Etransport
+     * Creates new form Camera
      */
-    public Etransport() {
+    public Camera() {
         initComponents();
     }
 
@@ -29,46 +27,43 @@ public class Etransport extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel5 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel5.setText("jLabel5");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/livec3.png"))); // NOI18N
+        jLabel7.setText("jLabel7");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(10, 310, 340, 110);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/livec4.png"))); // NOI18N
+        jLabel8.setText("jLabel8");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(440, 300, 350, 130);
+
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Welcome To E-Transport");
+        jLabel2.setText("Welcome To Live Cameras");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(190, 30, 460, 60);
-
-        jButton5.setText("Share my Ride");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton5);
-        jButton5.setBounds(520, 170, 130, 40);
+        jLabel2.setBounds(180, 10, 490, 60);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smart.png"))); // NOI18N
         jLabel4.setText("jLabel1");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(310, 220, 190, 170);
-
-        jButton6.setText("GPS Bus");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton6);
-        jButton6.setBounds(150, 170, 130, 40);
+        jLabel4.setBounds(330, 210, 190, 170);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton4.setText("BACK");
@@ -79,6 +74,16 @@ public class Etransport extends javax.swing.JFrame {
         });
         jPanel1.add(jButton4);
         jButton4.setBounds(280, 460, 220, 40);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/livec1.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(10, 90, 350, 120);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/livec2.png"))); // NOI18N
+        jLabel6.setText("jLabel6");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(440, 90, 360, 130);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -107,34 +112,11 @@ public class Etransport extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         dispose();
-        SmartCity a= new SmartCity();
+        Etraffic a= new Etraffic();
         a.pack();
         a.setLocationRelativeTo(null);
         a.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-         String number = JOptionPane.showInputDialog("ENTER numver of  bus you want to take  ");
-        
-        
-
-        
-        dispose();
-        BusPos c= new BusPos();
-        c.pack();
-        c.setLocationRelativeTo(null);
-        c.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-          dispose();
-        ShareRide c= new ShareRide();
-        c.pack();
-        c.setLocationRelativeTo(null);
-        c.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,31 +135,34 @@ public class Etransport extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Etransport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Camera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Etransport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Camera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Etransport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Camera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Etransport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Camera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Etransport().setVisible(true);
+                new Camera().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
