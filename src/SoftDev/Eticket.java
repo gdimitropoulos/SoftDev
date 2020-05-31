@@ -127,7 +127,7 @@ public class Eticket extends javax.swing.JFrame {
         String card = JOptionPane.showInputDialog("The price is: " + 2*a + "\n Enter card number");
         String password= JOptionPane.showInputDialog(" Enter card password");
         
-        JOptionPane.showMessageDialog(null," Synalagi oloklhrwthike! Your tickets will be send via email");
+        JOptionPane.showMessageDialog(null," Transaction completed!! Your tickets will be send via email");
         
         dispose();
         SmartCity c= new SmartCity();

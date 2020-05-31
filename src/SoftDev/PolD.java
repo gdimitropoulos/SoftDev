@@ -5,6 +5,8 @@
  */
 package SoftDev;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author b_kotsana
@@ -50,17 +52,17 @@ public class PolD extends javax.swing.JFrame {
         checkbox2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         checkbox2.setLabel("Sports");
         jPanel1.add(checkbox2);
-        checkbox2.setBounds(650, 130, 120, 40);
+        checkbox2.setBounds(240, 130, 120, 40);
 
         checkbox3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         checkbox3.setLabel("Arts.");
         jPanel1.add(checkbox3);
-        checkbox3.setBounds(240, 130, 120, 40);
+        checkbox3.setBounds(460, 130, 120, 40);
 
         checkbox4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         checkbox4.setLabel("Exhibitions");
         jPanel1.add(checkbox4);
-        checkbox4.setBounds(460, 130, 120, 40);
+        checkbox4.setBounds(640, 130, 120, 40);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton1.setText("Show Calendar");
@@ -114,6 +116,52 @@ public class PolD extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+         if(checkbox1.getState()==false && checkbox2.getState()==false  && checkbox3.getState()==true && checkbox4.getState()==false){
+       
+       dispose();
+      art a= new art(); 
+      a.pack();
+      a.setLocationRelativeTo(null);
+      a.setVisible(true);
+        
+        }
+        else if(checkbox1.getState()==true && checkbox2.getState()==false  && checkbox3.getState()==false && checkbox4.getState()==false){
+       
+        dispose();
+      music a= new music(); 
+      a.pack();
+      a.setLocationRelativeTo(null);
+      a.setVisible(true);
+        
+        }
+        else  if(checkbox1.getState()==false && checkbox2.getState()==true  && checkbox3.getState()==false && checkbox4.getState()==false){
+       
+      dispose();
+      sports a= new sports(); 
+      a.pack();
+      a.setLocationRelativeTo(null);
+      a.setVisible(true);
+        }
+        else  if(checkbox1.getState()==false && checkbox2.getState()==false   && checkbox3.getState()==false && checkbox4.getState()==true){
+       
+      dispose();
+      exhibition a= new exhibition(); 
+      a.pack();
+      a.setLocationRelativeTo(null);
+      a.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, " You can only check one box");
+             dispose();
+      Hotels a= new Hotels(); 
+      a.pack();
+      a.setLocationRelativeTo(null);
+      a.setVisible(true);
+        
+        }     
+        
+        
+    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
